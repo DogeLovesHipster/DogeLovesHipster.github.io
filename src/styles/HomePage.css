@@ -1,0 +1,42 @@
+.WikipediaBirdLogo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: Garamond, serif;
+    font-size: 3em;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    display: block;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h4 {
+    font-family: Garamond, serif;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    display: block;
+    position: fixed;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SearchBarHomePage {
+    display: block;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
