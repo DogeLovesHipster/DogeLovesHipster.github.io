@@ -11,12 +11,16 @@ const SearchBar = () => {
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    // Perform search logic here
     console.log('Searching for:', searchTerm);
 
-    // Navigate to Red-cockaded Woodpecker page if searchTerm matches
-    if (searchTerm.toLowerCase() === 'red-cockaded woodpecker') {
-      navigate('/red-cockaded-woodpecker'); // Use navigate instead of history.push
+    if (searchTerm.toLowerCase() === 'red-cockaded woodpecker' || 'red cockaded woodpecker' || 'red-cockaded' || 'red cockaded') {
+      navigate('/red-cockaded-woodpecker');
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
     }
   };
 
@@ -24,7 +28,6 @@ const SearchBar = () => {
     setSelectedLanguage(e.target.value);
   };
 
-  // Update display text of selected option
   useEffect(() => {
     const selectElement = document.querySelector('.searchBar-select');
     const selectedOption = selectElement.options[selectElement.selectedIndex];
@@ -37,12 +40,16 @@ const SearchBar = () => {
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
+        onKeyDown={handleKeyDown}
         placeholder="Search the Red-cockaded Woodpecker..."
         className="searchBar-input"
         list="birds"
       />
       <datalist id="birds">
         <option value="Red-cockaded Woodpecker" />
+        <option value="Red Cockaded Woodpecker" />
+        <option value="Red-cockaded" />
+        <option value="Red Cockaded" />
       </datalist>
       <select value={selectedLanguage} onChange={handleLanguageChange} className="searchBar-select">
         <option value="en">EN</option>

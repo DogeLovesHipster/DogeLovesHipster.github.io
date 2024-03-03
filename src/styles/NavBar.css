@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .navbar__logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navbar__links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar__links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar__links a:hover {
+    color: #ddd;
+  }
+
+  .WikipediaBirdLogoNavbar {
+    width: 75px;
+    height: 75px;
+    padding-left: 30px;
+  }

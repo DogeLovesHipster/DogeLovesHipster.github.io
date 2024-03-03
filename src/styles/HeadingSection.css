@@ -1,0 +1,9 @@
+.HeadingSection h2 {
+    margin-left: 3%;
+}
+
+.HeadingSection hr {
+    margin-left: 3%;
+    width: 95%;
+    border: 1px solid #6d6d6d;
+}

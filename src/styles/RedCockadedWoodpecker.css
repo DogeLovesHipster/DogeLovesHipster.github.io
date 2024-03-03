@@ -1,0 +1,36 @@
+.ReferencesContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px; 
+}
+.ReferencesContainer h2 {
+    text-align: left;
+    width: 85%;
+    margin: 0 auto;
+}
+  
+  .ReferencesSeperator {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #000;
+    margin: 20px 0;
+  }
+  
+  .ReferencesContainer ul {
+    width: 85%; 
+    list-style: decimal;
+    padding: 0;
+    margin: 0;
+    column-count: 2;
+    column-gap: 40px;
+}
+
+  .ReferencesSeperator { 
+    width: 95%;
+    border-color: rgb(102, 102, 102);
+    margin-left: auto;
+    margin-right: auto;
+  }
