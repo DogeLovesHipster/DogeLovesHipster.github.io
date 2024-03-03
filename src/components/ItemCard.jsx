@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import '../styles/ItemCard.css';
+
 const ItemCard = ({ item }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -13,11 +15,11 @@ const ItemCard = ({ item }) => {
 
     return (
         <div className="itemCard-card">
-            <h2>{item.name}</h2>
+            <h4>{item.name}</h4>
             <div className="image-slideshow">
-                <button onClick={handlePreviousImage}>Previous</button>
+                <button onClick={handlePreviousImage}>&lt;</button>
                 <img src={item.images[currentImageIndex]} alt={item.name} />
-                <button onClick={handleNextImage}>Next</button>
+                <button onClick={handleNextImage}>&gt;</button>
             </div>
             <p>{item.caption}</p>
             <h3>Conservation Status: {item.conservationStatus}</h3>
