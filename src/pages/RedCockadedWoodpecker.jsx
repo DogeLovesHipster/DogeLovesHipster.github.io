@@ -9,6 +9,8 @@ import ItemCard from '../components/ItemCard';
 import itemCardData from '../data/itemCardData';
 import BriefingSection from '../components/BriefingSection';
 import briefingData from '../data/briefingData';
+import DescriptionSection from '../components/DescriptionSection';
+import descriptionData from '../data/descriptionData';
 
 import '../styles/RedCockadedWoodpecker.css';
 
@@ -24,11 +26,14 @@ const RedCockadedWoodpecker = () => {
                 {itemCardData.map((item, index) => (
                     <ItemCard key={index} item={item} />
                 ))}
-                <BriefingSection briefings={briefingData.map(b => b.text)} />
+                <div className='container__briefing__description'>
+                    <BriefingSection briefings={briefingData.map(b => b.text)} />
+                    <DescriptionSection descriptions={descriptionData.map(d => d.text)} />
+                </div>
             </div>
             <References referencesList={references} />
-            </div>
-            <Footer />
+        </div>
+        <Footer />
         </>
     );
 };

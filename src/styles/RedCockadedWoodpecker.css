@@ -38,3 +38,12 @@
   .AligningContainer {
     margin-left: 3%;
   }
+
+  .container__briefing__itemcard {
+    display: flex;
+  }
+  
+  .container__briefing__description {
+    display: flex;
+    flex-direction: column;
+  }  
