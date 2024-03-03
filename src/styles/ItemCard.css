@@ -1,5 +1,6 @@
 .itemCard-card {
-    width: 300px;
+    width: 450px;
+    min-width: 300px; 
     margin: 20px;
     margin-left: auto; 
     border: 1px solid #696969;
