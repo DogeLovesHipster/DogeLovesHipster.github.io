@@ -1,8 +1,34 @@
+import { useEffect, useRef } from 'react';
 import '../styles/Footer.css';
 
 const Footer = () => {
+  const footerRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          footerRef.current.style.opacity = '1';
+        } else {
+          footerRef.current.style.opacity = '0';
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <footer className="footer">
+    <footer className="footer" ref={footerRef}>
       <div className="waves">
         <div className="wave" id="wave1"></div>
         <div className="wave" id="wave2"></div>

@@ -27,8 +27,8 @@ const RedCockadedWoodpecker = () => {
                 <BriefingSection briefings={briefingData.map(b => b.text)} />
             </div>
             <References referencesList={references} />
-            <Footer />
             </div>
+            <Footer />
         </>
     );
 };
