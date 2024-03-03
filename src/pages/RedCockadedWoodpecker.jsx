@@ -18,8 +18,8 @@ import '../styles/RedCockadedWoodpecker.css';
 const RedCockadedWoodpecker = () => {
     return (
         <>
+        <NavBar />
         <div className='AligningContainer'>
-            <NavBar />
             <AnnouncementBanner />
             <HeadingSection name="Red-Cockaded Woodpecker" />
             <div className='container__briefing__itemcard'>
