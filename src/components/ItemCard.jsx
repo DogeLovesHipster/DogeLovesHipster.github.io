@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import RangeMap from '../assets/images/RangeMap.jpg';
+
 import '../styles/ItemCard.css';
 
 const ItemCard = ({ item }) => {
@@ -24,6 +26,14 @@ const ItemCard = ({ item }) => {
             <p>{item.caption}</p>
             <h3>Conservation Status: {item.conservationStatus}</h3>
             <p>{item.description}</p>
+            <div className="MapContainer">
+                <img src={RangeMap} alt="Range Map" className='RangeMap' />
+                <div className="circle"></div>
+                <div className="legend">
+                    <div className="color-circle"></div>
+                    <span className="legend-text">Year Round</span>
+                </div>
+            </div>
         </div>
     );
 };

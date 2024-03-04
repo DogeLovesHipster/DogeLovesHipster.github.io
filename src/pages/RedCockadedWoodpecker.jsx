@@ -11,6 +11,8 @@ import BriefingSection from '../components/BriefingSection';
 import briefingData from '../data/briefingData';
 import DescriptionSection from '../components/DescriptionSection';
 import descriptionData from '../data/descriptionData';
+import FireEcologySection from '../components/FireEcologySection';
+import fireEcologyData from '../data/fireEcologyData';
 import CommentingSection from '../components/CommentingSection.jsx';
 
 import '../styles/RedCockadedWoodpecker.css';
@@ -18,23 +20,24 @@ import '../styles/RedCockadedWoodpecker.css';
 const RedCockadedWoodpecker = () => {
     return (
         <>
-        <NavBar />
-        <div className='AligningContainer'>
-            <AnnouncementBanner />
-            <HeadingSection name="Red-Cockaded Woodpecker" />
-            <div className='container__briefing__itemcard'>
-                {itemCardData.map((item, index) => (
-                    <ItemCard key={index} item={item} />
-                ))}
-                <div className='container__briefing__description'>
-                    <BriefingSection briefings={briefingData.map(b => b.text)} />
-                    <DescriptionSection descriptions={descriptionData.map(d => d.text)} />
+            <NavBar />
+            <div className='AligningContainer'>
+                <AnnouncementBanner />
+                <HeadingSection name="Red-Cockaded Woodpecker" />
+                <div className='container__briefing__itemcard'>
+                    {itemCardData.map((item, index) => (
+                        <ItemCard key={index} item={item} />
+                    ))}
+                    <div className='containerContent'>
+                        <BriefingSection briefings={briefingData.map(b => b.text)} />
+                        <DescriptionSection descriptions={descriptionData.map(d => d.text)} />
+                        <FireEcologySection fireEcology={fireEcologyData.map(f => f.text)} />
+                    </div>
                 </div>
+                <CommentingSection />
+                <References referencesList={references} />
             </div>
-            <CommentingSection />
-            <References referencesList={references} />
-        </div>
-        <Footer />
+            <Footer />
         </>
     );
 };

@@ -1,6 +1,7 @@
 .itemCard-card {
     width: 450px;
-    min-width: 300px; 
+    min-width: 300px;
+    max-height: 900px; 
     margin: 20px;
     margin-left: auto; 
     border: 1px solid #696969;
@@ -30,6 +31,28 @@
     object-fit: cover;
 }
 
+.RangeMap {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+  }
+  
+  .color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(102, 103, 170);
+    margin-right: 10px;
+  }
+  
+  .legend-text {
+    font-size: 12px;
+  }
 
 .image-slideshow button {
     position: absolute;

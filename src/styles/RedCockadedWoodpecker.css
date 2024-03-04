@@ -1,49 +1,45 @@
 .ReferencesContainer {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 50px; 
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
 }
 .ReferencesContainer h4 {
-    text-align: left;
-    width: 85%;
-    margin: 0 auto;
-}
-  
-  .ReferencesSeperator {
-    width: 100%;
-    border: none;
-    border-top: 1px solid #000;
-    margin: 20px 0;
-  }
-  
-  .ReferencesContainer ul {
-    width: 85%; 
-    list-style: decimal;
-    padding: 0;
-    margin: 0;
-    column-count: 2;
-    column-gap: 40px;
+  text-align: left;
+  width: 85%;
+  margin: 0 auto;
 }
 
-  .ReferencesSeperator { 
-    width: 95%;
-    border-color: rgb(102, 102, 102);
-    margin-left: auto;
-    margin-right: auto;
-  }
+.ReferencesSeperator {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #000;
+  margin: 20px 0;
+}
 
-  .AligningContainer {
-    margin-left: 3%;
-  }
+.ReferencesContainer ul {
+  width: 85%;
+  list-style: decimal;
+  padding: 0;
+  margin: 0;
+  column-count: 2;
+  column-gap: 40px;
+}
 
-  .container__briefing__itemcard {
-    display: flex;
-  }
-  
-  .container__briefing__description {
-    display: flex;
-    flex-direction: column;
-  }  
+.ReferencesSeperator {
+  width: 95%;
+  border-color: rgb(102, 102, 102);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.AligningContainer {
+  margin-left: 3%;
+}
+
+.containerContent {
+  display: flex;
+  flex-direction: column;
+}
