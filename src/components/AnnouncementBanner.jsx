@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import images from '../../src/data/bannerImages.js';
+import images from '../data/bannerImages.js';
 
 import '../styles/AnnouncementBanner.css';
 

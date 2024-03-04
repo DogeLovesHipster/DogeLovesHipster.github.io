@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import RangeMap from '../assets/images/RangeMap.jpg';
+import RedCockadedWoodpecker from '../assets/images/cockaded_3.jpg';
 import SoundButtonGroup from './SoundButtonGroup';
 
 import '../styles/ItemCard.css';

@@ -1,4 +1,4 @@
-import '.././styles/DropDownSearch.css';
+import '../styles/DropDownSearch.css';
 
 const DropDownSearch = (name, type, image) => {
     return (
