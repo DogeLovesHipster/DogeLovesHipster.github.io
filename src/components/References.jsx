@@ -1,7 +1,9 @@
+import '../styles/References.css';
+
 const References = ({ referencesList }) => {
     return (
         <div className="ReferencesContainer">
-            <h2>References</h2>
+            <h4>References</h4>
             <hr className="ReferencesSeperator"></hr>
             <ul>
                 {referencesList && referencesList.map((reference, index) => (

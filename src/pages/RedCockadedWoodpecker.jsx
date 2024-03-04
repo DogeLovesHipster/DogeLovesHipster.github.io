@@ -11,9 +11,9 @@ import BriefingSection from '../components/BriefingSection';
 import briefingData from '../data/briefingData';
 import DescriptionSection from '../components/DescriptionSection';
 import descriptionData from '../data/descriptionData';
+import CommentingSection from '../components/CommentingSection.jsx';
 
 import '../styles/RedCockadedWoodpecker.css';
-
 
 const RedCockadedWoodpecker = () => {
     return (
@@ -31,6 +31,7 @@ const RedCockadedWoodpecker = () => {
                     <DescriptionSection descriptions={descriptionData.map(d => d.text)} />
                 </div>
             </div>
+            <CommentingSection />
             <References referencesList={references} />
         </div>
         <Footer />
