@@ -1,13 +1,32 @@
 .itemCard-card {
     width: 450px;
     min-width: 300px;
-    max-height: 900px; 
+    max-height: 900px;
     margin: 20px;
     margin-left: auto; 
     border: 1px solid #696969;
     box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
     padding: 20px;
     box-sizing: border-box;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.itemCard-card-expanded {
+    max-height: 1650px;
+    transition: all 0.3s ease;
+}
+
+.itemCard-card button {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.sound-button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .itemCard-card h4 {
@@ -53,6 +72,13 @@
   .legend-text {
     font-size: 12px;
   }
+
+  .sound-button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
 
 .image-slideshow button {
     position: absolute;

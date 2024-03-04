@@ -31,7 +31,7 @@ const RedCockadedWoodpecker = () => {
                     <div className='containerContent'>
                         <BriefingSection briefings={briefingData.map(b => b.text)} />
                         <DescriptionSection descriptions={descriptionData.map(d => d.text)} />
-                        <FireEcologySection fireEcology={fireEcologyData.map(f => f.text)} />
+                        <FireEcologySection fireEcology={fireEcologyData} />
                     </div>
                 </div>
                 <CommentingSection />

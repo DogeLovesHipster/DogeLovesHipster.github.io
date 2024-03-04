@@ -1,11 +1,14 @@
+import GitHubBanner from '../assets/images/GitHubBanner.png';
+import PersonalWebsite from '../assets/images/PersonalWebsite.png';
+
 const bannerImages = [
     {
-        image: 'src/assets/images/GitHubBanner.png',
+        image: GitHubBanner,
         text: 'Visit my GitHub!',
         redirect: 'https://github.com/DogeLovesHipster'
     },
     {
-        image: 'src/assets/images/PersonalWebsite.png',
+        image: PersonalWebsite,
         text: 'Check out my personal website!',
         redirect: 'https://sergiomendozajr.com/'
     }
