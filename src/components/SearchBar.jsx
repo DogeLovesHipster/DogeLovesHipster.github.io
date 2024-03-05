@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
+import Fuse from 'fuse.js'
+
 import '../styles/SearchBar.css';
 
 const SearchBar = () => {
@@ -13,7 +15,15 @@ const SearchBar = () => {
   const handleSearch = () => {
     console.log('Searching for:', searchTerm);
 
-    if (searchTerm.toLowerCase() === 'red-cockaded woodpecker' || 'red cockaded woodpecker' || 'red-cockaded' || 'red cockaded') {
+    const options = {
+      includeScore: true,
+      threshold: 0.3,
+    };
+
+    const fuse = new Fuse(['red-cockaded woodpecker', 'red cockaded woodpecker', 'red-cockaded', 'red cockaded', 'red woodpecker', 'cockaded', 'cockaded'], options);
+    const result = fuse.search(searchTerm);
+  
+    if (result.length > 0 && result[0].score < 0.3) { // Adjust this value as needed
       navigate('/red-cockaded-woodpecker');
     }
   };
@@ -41,7 +51,7 @@ const SearchBar = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder="Search the Red-cockaded Woodpecker..."
+        placeholder="Red-cockaded Woodpecker..."
         className="searchBar-input"
         list="birds"
       />

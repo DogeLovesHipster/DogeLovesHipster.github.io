@@ -1,46 +1,59 @@
-.content {
+body {
+    background-color: rgba(1, 13, 22, 0.5);
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    width: 100%;
     text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    word-wrap: break-word;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    margin: 0;
 }
 
 .WikipediaBirdLogo {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
+    width: 250px;
+    height: 250px;
 }
 
-h1 {
-    font-family: Garamond, serif;
-    font-size: 3em;
-    margin-bottom: 20px;
+.HomeSearchBar {
+    width: 70%;
+    margin: 0 auto;
 }
 
-h4 {
-    font-family: Garamond, serif;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-.SearchBarHomePage {
-    margin-bottom: 20px;
-}
-
-.Footer {
-    position: fixed;
+.homeFooter {
+    position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 100%;
-    text-align: center;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
 }
+
+@media (min-width: 720px) {
+    body {
+        padding-bottom: 60px; 
+    }
+}
+ 
+@media (max-width: 719px) {
+    body {
+        position: fixed;
+    }
+}
+
+@media (min-width: 375px) {
+    .SmallMobile {
+        margin-bottom: 30%;
+    }
+    .homeFooter {
+        bottom: 0;
+    }
+}
+

@@ -8,19 +8,15 @@ import '../styles/HomePage.css';
 const HomePage = () => {
     return (
         <>
-            <div className='content'>
-                <div>
-                    <h1>Welcome to Wikipedia Bird</h1>
-                    <h4>The Free Encyclopedia</h4>
-                </div>
-                <div>
-                    <img src={BirdLogo} alt="Wikipedia Bird" className='WikipediaBirdLogo' />
-                </div>
-                <div className='SearchBarHomePage'>
-                    <SearchBar />
-                </div>
+        <div className='SmallMobile'>
+            <h1>Birdpedia</h1>
+            <h2>By Sergio Mendoza</h2>
+            <img src={BirdLogo} alt="Wikipedia Bird" className='WikipediaBirdLogo' />
+            <div className='HomeSearchBar'>
+            <SearchBar />
             </div>
-            <div className='Footer'>
+            </div>
+            <div className='homeFooter'>
                 <Footer />
             </div>
         </>
