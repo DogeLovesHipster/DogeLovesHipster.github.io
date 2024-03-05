@@ -2,11 +2,19 @@ import React, { useRef } from 'react';
 import { FaVolumeUp } from 'react-icons/fa';
 
 const AudioButton = ({ audioSrc, callType, date, citation, duration }) => {
+  console.log('AudioButton props:', { audioSrc, callType, date, citation, duration });
+
+
   const audioRef = useRef();
 
   const playSound = () => {
+    console.log('Playing sound:', audioSrc);
     audioRef.current.play();
   };
+
+  const handleError = (e) => {
+    console.error('Error playing sound:', e);
+  }
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>

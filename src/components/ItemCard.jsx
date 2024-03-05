@@ -46,7 +46,7 @@ const ItemCard = ({ item }) => {
             </button>
             {isSoundGroupVisible && (
                 <div className='sound-button-group'>
-                    <SoundButtonGroup />
+                    <SoundButtonGroup sounds={item.sounds} />
                 </div>
             )}
         </div>
