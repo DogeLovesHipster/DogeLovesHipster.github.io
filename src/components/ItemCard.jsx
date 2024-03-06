@@ -1,8 +1,9 @@
 import { useState } from 'react';
 
 import RangeMap from '../assets/images/RangeMap.jpg';
-import RedCockadedWoodpecker from '../assets/images/cockaded_3.jpg';
 import SoundButtonGroup from './SoundButtonGroup';
+import ScientificClassification from './ScientificClassification';
+import ScientificClassificationData from '../data/scientificClassification.js';
 
 import '../styles/ItemCard.css';
 
@@ -31,7 +32,7 @@ const ItemCard = ({ item }) => {
                 <button onClick={handleNextImage}>&gt;</button>
             </div>
             <p>{item.caption}</p>
-            <h3>Conservation Status: {item.conservationStatus}</h3>
+            <h4>Conservation Status: {item.conservationStatus}</h4>
             <p>{item.description}</p>
             <div className="MapContainer">
                 <img src={RangeMap} alt="Range Map" className='RangeMap' />
@@ -40,6 +41,21 @@ const ItemCard = ({ item }) => {
                     <div className="color-circle"></div>
                     <span className="legend-text">Year Round</span>
                 </div>
+            </div>
+            <div className='ScientificSection'>
+                {ScientificClassificationData.map((item, index) => (
+                    <ScientificClassification
+                    key={index}
+                    domain={item.domain}
+                    kingdom={item.kingdom}
+                    phylum={item.phylum}
+                    class={item.class}
+                    order={item.order}
+                    family={item.family}
+                    genus={item.genus}
+                    species={item.species}
+                    />
+                ))}
             </div>
             <button onClick={toggleSoundGroup}>
                 {isSoundGroupVisible ? 'Hide Sounds' : 'Show Sounds'}

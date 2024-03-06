@@ -5,9 +5,15 @@ import DropDownSearch from '../components/DropDownSearch';
 import BirdLogo from '../assets/images/WikipediaBird.png';
 import '../styles/HomePage.css';
 
+import useBodyClass from '../hooks/useBodyClass'
+
 const HomePage = () => {
+
+    useBodyClass('home-page');
+
     return (
         <>
+        <div className='home-page'>
         <div className='SmallMobile'>
             <h1>Birdpedia</h1>
             <h2>By Sergio Mendoza</h2>
@@ -18,6 +24,7 @@ const HomePage = () => {
             </div>
             <div className='homeFooter'>
                 <Footer />
+            </div>
             </div>
         </>
     );

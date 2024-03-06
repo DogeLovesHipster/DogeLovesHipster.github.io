@@ -13,6 +13,7 @@ import DescriptionSection from '../components/DescriptionSection.jsx';
 import descriptionData from '../data/descriptionData.js';
 import FireEcologySection from '../components/FireEcologySection.jsx';
 import fireEcologyData from '../data/fireEcologyData.js';
+import VideoPlayer from '../components/VideoPlayer.jsx';
 import CommentingSection from '../components/CommentingSection.jsx';
 
 import '../styles/RedCockadedWoodpecker.css';
@@ -20,7 +21,9 @@ import '../styles/RedCockadedWoodpecker.css';
 const RedCockadedWoodpecker = () => {
     return (
         <>
-            <NavBar />
+            <div className='smallDeviceNavbar'>
+                <NavBar />
+            </div>
             <div className='AligningContainer'>
                 <AnnouncementBanner />
                 <HeadingSection name="Red-Cockaded Woodpecker" />
@@ -32,12 +35,18 @@ const RedCockadedWoodpecker = () => {
                         <BriefingSection briefings={briefingData.map(b => b.text)} />
                         <DescriptionSection descriptions={descriptionData.map(d => d.text)} />
                         <FireEcologySection fireEcology={fireEcologyData} />
+                        <div className='VideoPlayer1'>
+                            <h3>Informational video from PBS</h3>
+                            <VideoPlayer videoUrl="https://player.pbs.org/viralplayer/3066847518/" />
+                        </div>
                     </div>
                 </div>
                 <CommentingSection />
                 <References referencesList={references} />
             </div>
-            <Footer />
+            <div className="RedCockadedWoodpeckerFooter">
+                <Footer />
+            </div>
         </>
     );
 };

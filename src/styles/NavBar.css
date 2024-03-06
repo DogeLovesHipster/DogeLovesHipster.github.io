@@ -1,12 +1,10 @@
 .navbar {
-  padding: 1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: #fff;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 .navbar__logo a {
@@ -20,7 +18,7 @@
 .navbar__links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 5%;
   padding: 7px 20px;
   margin-right: 2%;
 }
@@ -42,7 +40,8 @@
 }
 
 .WikipediaBirdLogoNavbar {
-  width: 75px;
-  height: 75px;
-  padding-left: 30px;
+  width: 100%;
+  max-width: 75px;
+  height: auto;
+  padding-left: 100%;
 }
