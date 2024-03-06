@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,11 +10,24 @@ const CommentingSection = () => {
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
 
+    useEffect(() => {
+        axios.get('/api/comments')
+            .then(response => setComments(response.data))
+            .catch(error => console.error(error));
+    }, []);
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        setComments([...comments, { name, comment }]);
-        setName('');
-        setComment('');
+
+        const newComment = { name, comment };
+
+        axios.post('/api/comments', newComment)
+            .then(response => {
+                setComments(prevComments => [...prevComments, response.data]);
+                setName('');
+                setComment('');
+            })
+            .catch(error => console.error(error));
     };
 
     return (
@@ -36,7 +50,7 @@ const CommentingSection = () => {
                 </div>
             </form>
             <div className="comments">
-                {comments.map((comment, index) => (
+                {Array.isArray(comments) && comments.map((comment, index) => (
                     <div key={index} className="comment">
                         <h2>{comment.name}</h2>
                         <p>{comment.comment}</p>

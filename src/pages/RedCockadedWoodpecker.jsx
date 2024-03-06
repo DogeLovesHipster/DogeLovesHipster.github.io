@@ -1,9 +1,13 @@
+import { useEffect, useRef, createRef } from 'react';
+
 import SearchBar from '../components/SearchBar.jsx';
 import Footer from '../components/Footer.jsx';
 import References from '../components/References.jsx';
 import references from '../data/references.js';
 import NavBar from '../components/NavBar.jsx';
 import AnnouncementBanner from '../components/AnnouncementBanner.jsx';
+import BaseSection from '../components/BaseSection.jsx';
+import sectionData from '../data/pageContent.js';
 import HeadingSection from '../components/HeadingSection.jsx';
 import ItemCard from '../components/ItemCard.jsx';
 import itemCardData from '../data/itemCardData.js';
@@ -19,6 +23,33 @@ import CommentingSection from '../components/CommentingSection.jsx';
 import '../styles/RedCockadedWoodpecker.css';
 
 const RedCockadedWoodpecker = () => {
+    const sectionRefs = useRef(sectionData.map(() => createRef()));
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        sectionRefs.current.forEach(ref => {
+            if (ref.current) {
+                observer.observe(ref.current);
+            }
+        });
+
+        return () => {
+            sectionRefs.current.forEach(ref => {
+                if (ref.current) {
+                    observer.unobserve(ref.current);
+                }
+            });
+        };
+    }, []);
+    
     return (
         <>
             <div className='smallDeviceNavbar'>
@@ -31,10 +62,17 @@ const RedCockadedWoodpecker = () => {
                     {itemCardData.map((item, index) => (
                         <ItemCard key={index} item={item} />
                     ))}
-                    <div className='containerContent'>
-                        <BriefingSection briefings={briefingData.map(b => b.text)} />
-                        <DescriptionSection descriptions={descriptionData.map(d => d.text)} />
-                        <FireEcologySection fireEcology={fireEcologyData} />
+            <div className='containerContent'>
+                {sectionData.map((section, index) => (
+                    <BaseSection 
+                        ref={sectionRefs.current[index]} 
+                        key={index} 
+                        title={section.title} 
+                        text={section.text} 
+                        figure={section.figure} 
+                        break={section.break} 
+                    />
+                ))}
                         <div className='VideoPlayer1'>
                             <h3>Informational video from PBS</h3>
                             <VideoPlayer videoUrl="https://player.pbs.org/viralplayer/3066847518/" />
