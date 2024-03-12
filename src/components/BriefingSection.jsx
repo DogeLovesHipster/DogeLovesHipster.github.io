@@ -1,5 +1,3 @@
-import "../styles/BriefingSection.css";
-
 const BriefingSection = ({ briefings }) => {
     return (
         <section className="briefing">

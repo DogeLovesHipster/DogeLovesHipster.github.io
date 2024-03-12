@@ -1,6 +1,5 @@
 import { useEffect, useRef, createRef } from 'react';
 
-import SearchBar from '../components/SearchBar.jsx';
 import Footer from '../components/Footer.jsx';
 import References from '../components/References.jsx';
 import references from '../data/references.js';
@@ -11,49 +10,47 @@ import sectionData from '../data/pageContent.js';
 import HeadingSection from '../components/HeadingSection.jsx';
 import ItemCard from '../components/ItemCard.jsx';
 import itemCardData from '../data/itemCardData.js';
-import BriefingSection from '../components/BriefingSection.jsx';
-import briefingData from '../data/briefingData.js';
-import DescriptionSection from '../components/DescriptionSection.jsx';
-import descriptionData from '../data/descriptionData.js';
-import FireEcologySection from '../components/FireEcologySection.jsx';
-import fireEcologyData from '../data/fireEcologyData.js';
 import VideoPlayer from '../components/VideoPlayer.jsx';
 import CommentingSection from '../components/CommentingSection.jsx';
+import SpaceBackground from '../components/SpaceBackground.jsx';
 
 import '../styles/RedCockadedWoodpecker.css';
 
 const RedCockadedWoodpecker = () => {
     const sectionRefs = useRef(sectionData.map(() => createRef()));
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            },
-            { threshold: 0.1 }
-        );
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver(
+    //         ([entry]) => {
+    //             if (entry.isIntersecting) {
+    //                 entry.target.classList.add('fade-in');
+    //             }
+    //         },
+    //         { threshold: 0 }
+    //     );
 
-        sectionRefs.current.forEach(ref => {
-            if (ref.current) {
-                observer.observe(ref.current);
-            }
-        });
+    //     sectionRefs.current.forEach(ref => {
+    //         if (ref.current) {
+    //             observer.observe(ref.current);
+    //         }
+    //     });
 
-        return () => {
-            sectionRefs.current.forEach(ref => {
-                if (ref.current) {
-                    observer.unobserve(ref.current);
-                }
-            });
-        };
-    }, []);
+    //     return () => {
+    //         sectionRefs.current.forEach(ref => {
+    //             if (ref.current) {
+    //                 observer.unobserve(ref.current);
+    //             }
+    //         });
+    //     };
+    // }, [sectionData]);
     
     return (
         <>
             <div className='smallDeviceNavbar'>
                 <NavBar />
+            </div>
+            <div className='SpaceBack'>
+                <SpaceBackground />
             </div>
             <div className='AligningContainer'>
                 <AnnouncementBanner />

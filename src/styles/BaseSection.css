@@ -33,6 +33,6 @@ hr {
 .baseSectionText {
     display: flex;
     flex-direction: column;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    /* opacity: 0;
+    transition: opacity 1s ease-in-out; */
 }
