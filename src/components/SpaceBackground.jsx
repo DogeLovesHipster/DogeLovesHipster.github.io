@@ -60,7 +60,6 @@ const SpaceBackground = () => {
           "https://raw.githubusercontent.com/Kuntal-Das/textures/main/sp1.png"
         ),
         transparent: true
-        // color: "#ff0000"
       }),
       new THREE.PointsMaterial({
         size: 0.08,
@@ -68,7 +67,6 @@ const SpaceBackground = () => {
           "https://raw.githubusercontent.com/Kuntal-Das/textures/main/sp2.png"
         ),
         transparent: true
-        // color: "#0000ff"
       })
     ];
 
