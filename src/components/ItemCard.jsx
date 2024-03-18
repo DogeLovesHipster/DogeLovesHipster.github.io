@@ -28,10 +28,10 @@ const ItemCard = ({ item }) => {
             <h4>{item.name}</h4>
             <div className="image-slideshow">
                 <button onClick={handlePreviousImage}>&lt;</button>
-                <img src={item.images[currentImageIndex]} alt={item.name} />
+                <img src={item.images[currentImageIndex].src} alt={item.name} />
                 <button onClick={handleNextImage}>&gt;</button>
             </div>
-            <p>{item.caption}</p>
+            <p>{item.images[currentImageIndex].caption}</p>
             <h4>Conservation Status: {item.conservationStatus}</h4>
             <p>{item.description}</p>
             <div className="MapContainer">

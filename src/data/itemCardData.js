@@ -13,12 +13,11 @@ const itemCardData = [
   {
     name: 'Red-Cockaded Woodpecker',
     images: [
-      Cockaded1,
-      Cockaded2,
-      Cockaded3,
-      Cockaded4
+      { src: Cockaded1, caption: "Red-Cockaded Woodpecker on tree with noticable tags on it's feet" },
+      { src: Cockaded2, caption: "Red-Cockaded Woodpecker fluttering its wings near an opening of its nest" },
+      { src: Cockaded3, caption: 'Illustration of the three Red-Cockaded Woodpeckers drawn by John James Audobon' },
+      { src: Cockaded4, caption: 'Red-Cockaded Woodpecker sticking its head out of a longleaf pine nest' },
     ],
-    caption: 'A cute Red-Cockaded Woodpecker chillin.',
     conservationStatus: 'Near Threatened',
     sounds: [
       { src: call1, callType: 'Call 1', date: 'March 02, 2007', citation: 'Recorded by Martha Fischer / Macaulay Library', duration: '0:21' },
