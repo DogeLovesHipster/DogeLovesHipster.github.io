@@ -18,31 +18,6 @@ import '../styles/RedCockadedWoodpecker.css';
 
 const RedCockadedWoodpecker = () => {
     const sectionRefs = useRef(sectionData.map(() => createRef()));
-
-    // useEffect(() => {
-    //     const observer = new IntersectionObserver(
-    //         ([entry]) => {
-    //             if (entry.isIntersecting) {
-    //                 entry.target.classList.add('fade-in');
-    //             }
-    //         },
-    //         { threshold: 0 }
-    //     );
-
-    //     sectionRefs.current.forEach(ref => {
-    //         if (ref.current) {
-    //             observer.observe(ref.current);
-    //         }
-    //     });
-
-    //     return () => {
-    //         sectionRefs.current.forEach(ref => {
-    //             if (ref.current) {
-    //                 observer.unobserve(ref.current);
-    //             }
-    //         });
-    //     };
-    // }, [sectionData]);
     
     return (
         <>
