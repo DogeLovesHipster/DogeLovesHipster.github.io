@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,11 +8,16 @@ const CommentingSection = () => {
     const [name, setName] = useState('');
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get('/api/comments')
-            .then(response => setComments(response.data))
-            .catch(error => console.error(error));
+        fetch('http://localhost:5173/comments')
+            .then(response => response.json())
+            .then(data => setComments(data))
+            .catch(error => {
+                console.error('Fetch error:', error);
+                setError('An error occurred while fetching comments');
+            });
     }, []);
 
     const handleSubmit = (e) => {
@@ -21,17 +25,32 @@ const CommentingSection = () => {
 
         const newComment = { name, comment };
 
-        axios.post('/api/comments', newComment)
-            .then(response => {
-                setComments(prevComments => [...prevComments, response.data]);
-                setName('');
-                setComment('');
-            })
-            .catch(error => console.error(error));
+        fetch('http://localhost:5173/comments', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newComment),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Comment sent to the database:', data);
+            setComments(prevComments => [...prevComments, data]);
+            setName('');
+            setComment('');
+        })
+        .catch(error => {
+            console.error(error);
+            setError('An error occurred while creating the comment');
+        });
     };
 
     return (
         <div className="comment-section">
+            {error && <p>{error}</p>}
             <form onSubmit={handleSubmit}>
                 <label>
                     Name
