@@ -14,12 +14,14 @@ const CommentingSection = () => {
     const [comments, setComments] = useState([]);
     const [error, setError] = useState(null);
 
+    // I think I have the issue fetching the contents of my db because it is not connecting to the right route
     useEffect(() => {
         fetch('http://localhost:5173/red-cockaded-woodpecker')
             .then(response => response.json())
             .then(data => setComments(data))
             .catch(error => {
                 console.error('Fetch error:', error);
+                // This error appears on the screen when the fetch fails
                 setError('An error occurred while fetching comments');
             });
     }, []);
@@ -36,11 +38,13 @@ const CommentingSection = () => {
         })
         .then(response => {
             if (!response.ok) {
+                // This error is thrown in the console because the fetch fails when trying to post a comment
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             return response.json();
         })
         .then(data => {
+            // The comment is trying to be sent to the database, but since it's not connected, it doesn't appear in the database
             console.log('Comment sent to the database:', data);
             setComments(prevComments => [...prevComments, data]);
             setName('');

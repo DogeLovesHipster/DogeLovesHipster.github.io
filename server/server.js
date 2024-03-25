@@ -37,6 +37,10 @@ mongoose
   })
 
 // Routes
+
+// Tried changing this to different prefixes for the routes, but it didn't work
+// app.use('/api', routes)
+// app.use*('red-cockaded-woodpecker', routes)
 app.use(routes)
 
 // Start server
