@@ -7,6 +7,14 @@ import ScientificClassificationData from '../data/scientificClassification.js';
 
 import '../styles/ItemCard.css';
 
+/**
+ * Renders a card component for displaying item details.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.item - The item object containing details to be displayed.
+ * @returns {JSX.Element} The rendered ItemCard component.
+ */
 const ItemCard = ({ item }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isSoundGroupVisible, setSoundGroupVisible] = useState(false);

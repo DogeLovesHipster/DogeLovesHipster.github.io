@@ -1,5 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import SoundButtonGroup from './SoundButtonGroup';
+
+/**
+ * Renders an item card with a toggleable sound group.
+ *
+ * @returns {JSX.Element} The rendered item card component.
+ */
 
 function ItemCard() {
   const [isSoundGroupVisible, setSoundGroupVisible] = useState(false);

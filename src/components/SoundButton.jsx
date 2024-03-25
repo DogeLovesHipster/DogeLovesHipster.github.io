@@ -1,7 +1,19 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { FaVolumeUp, FaPause } from 'react-icons/fa';
 import CountdownTimer from './CountdownTimer';
 
+/**
+ * A component that represents an audio button.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {string} props.audioSrc - The source URL of the audio file.
+ * @param {string} props.callType - The type of the call.
+ * @param {string} props.date - The date of the call.
+ * @param {string} props.citation - The citation for the call.
+ * @param {number} props.duration - The duration of the audio file in seconds.
+ * @returns {JSX.Element} The rendered AudioButton component.
+ */
 const AudioButton = ({ audioSrc, callType, date, citation, duration }) => {
     const audioRef = useRef();
     const [isPlaying, setIsPlaying] = useState(false);

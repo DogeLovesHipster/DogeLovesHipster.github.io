@@ -1,6 +1,12 @@
 import BirdLogo from '../assets/images/WikipediaBird.png';
 import '../styles/NavBar.css';
 
+/**
+ * Represents the navigation bar component.
+ * @returns {JSX.Element} The rendered navigation bar.
+ */
+
+// These are jsut for looks, they do not currently lead anywhere
 const NavBar = () => {
   return (
     <nav className="navbar">

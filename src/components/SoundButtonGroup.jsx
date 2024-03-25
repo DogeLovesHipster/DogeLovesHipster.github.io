@@ -1,5 +1,12 @@
-import React from 'react';
 import SoundButton from './SoundButton';
+
+/**
+ * Renders a group of sound buttons.
+ *
+ * @component
+ * @param {Object[]} sounds - An array of sound objects.
+ * @returns {JSX.Element} The rendered SoundButtonGroup component.
+ */
 
 const SoundButtonGroup = ({ sounds }) => {
     return (

@@ -1,10 +1,15 @@
 import SearchBar from '../components/SearchBar';
 import Footer from '../components/Footer';
 import SpaceBackground from '../components/SpaceBackground';
-import CommentingSection from '../components/CommentingSection';
 
 import BirdLogo from '../assets/images/WikipediaBird.png';
 import '../styles/HomePage.css';
+
+/**
+ * Renders the home page of the application.
+ *
+ * @returns {JSX.Element} The rendered home page component.
+ */
 
 const HomePage = () => {
 

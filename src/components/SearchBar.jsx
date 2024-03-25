@@ -7,6 +7,12 @@ import Fuse from 'fuse.js'
 
 import '../styles/SearchBar.css';
 
+/**
+ * SearchBar component for searching red-cockaded woodpeckers.
+ *
+ * @component
+ */
+
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedLanguage, setSelectedLanguage] = useState('en');

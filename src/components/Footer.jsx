@@ -1,6 +1,16 @@
 import { useEffect, useRef } from 'react';
 import '../styles/Footer.css';
 
+/**
+ * Footer component.
+ *
+ * @component
+ * @example
+ * return (
+ *   <Footer />
+ * )
+ */
+
 const Footer = () => {
   const footerRef = useRef();
 

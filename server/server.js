@@ -5,6 +5,12 @@ import mongoose from 'mongoose'
 import { corsOptions } from './config/corsOptions.js'
 import routes from '../server/routes/comment.js'
 
+/**
+ * The server instance.
+ *
+ * @type {import('http').Server}
+ */
+
 // Constants
 const PORT = process.env.PORT || 3000
 const ENV = process.env.NODE_ENV || 'production'

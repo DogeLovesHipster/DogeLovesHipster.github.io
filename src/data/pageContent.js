@@ -9,6 +9,11 @@ import fireExample1 from '../assets/images/fireExample1.jpg';
 import fireExample2 from '../assets/images/fireExample2.jpg';
 import noneFireExample1 from '../assets/images/noneFireExample1.jpg';
 
+/**
+ * Array containing the content for each page.
+ * @type {Array<Object>}
+ */
+
 const pageContent = [
     {
         title: "",

@@ -1,4 +1,4 @@
-import { useEffect, useRef, createRef } from 'react';
+import { useRef, createRef } from 'react';
 
 import Footer from '../components/Footer.jsx';
 import References from '../components/References.jsx';
@@ -15,6 +15,13 @@ import CommentingSection from '../components/CommentingSection.jsx';
 import SpaceBackground from '../components/SpaceBackground.jsx';
 
 import '../styles/RedCockadedWoodpecker.css';
+
+/**
+ * Renders the Red-Cockaded Woodpecker page.
+ *
+ * @component
+ * @returns {JSX.Element} The Red-Cockaded Woodpecker page component.
+ */
 
 const RedCockadedWoodpecker = () => {
     const sectionRefs = useRef(sectionData.map(() => createRef()));

@@ -1,6 +1,11 @@
 import GitHubBanner from '../assets/images/GitHubBanner.png';
 import PersonalWebsite from '../assets/images/PersonalWebsite.png';
 
+/**
+ * Array of banner images with associated text and redirect URLs.
+ * @type {Array<Object>}
+ */
+
 const bannerImages = [
     {
         image: GitHubBanner,

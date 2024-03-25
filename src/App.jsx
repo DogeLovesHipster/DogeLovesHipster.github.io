@@ -5,6 +5,12 @@ import LoadingLogo from './components/LoadingLogo';
 import HomePage from './pages/HomePage';
 import RedCockadedWoodpecker from './pages/RedCockadedWoodpecker';
 
+/**
+ * The main component of the application.
+ *
+ * @returns {JSX.Element} The rendered App component.
+ */
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 

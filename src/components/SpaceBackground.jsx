@@ -1,7 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 import "../styles/SpaceBackground.css";
+
+/**
+ * Renders a space background using Three.js library.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered space background.
+ */
 
 const SpaceBackground = () => {
   const canvasRef = useRef(null);

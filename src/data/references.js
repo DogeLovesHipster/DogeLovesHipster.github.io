@@ -1,3 +1,9 @@
+/**
+ * Array of references for the red-cockaded woodpecker.
+ *
+ * @type {Array<Object>}
+ */
+
 const references = [
     {
         // Conner, R.N., Sáenz, D., & Rudolph, D.C. (2004). The red-cockaded woodpecker: interactions with fire, snags, fungi, rat snakes and pileated woodpeckers. Texas Journal of Science, 56(4), 415-426.

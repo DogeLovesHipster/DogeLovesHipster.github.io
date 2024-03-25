@@ -4,6 +4,10 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 import '../styles/CommentingSection.css';
 
+/**
+ * CommentingSection component represents a section for commenting.
+ * It allows users to submit comments, fetch existing comments, and display them.
+ */
 const CommentingSection = () => {
     const [name, setName] = useState('');
     const [comment, setComment] = useState('');

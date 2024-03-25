@@ -9,6 +9,12 @@ import call4 from "../assets/sounds/Calls4.mp3";
 import drum1 from "../assets/sounds/Drum1.mp3";
 import juvenileCall1 from "../assets/sounds/JuvenileCall1.mp3";
 
+/**
+ * Array containing data for item cards.
+ *
+ * @type {Array<Object>}
+ */
+
 const itemCardData = [
   {
     name: 'Red-Cockaded Woodpecker',

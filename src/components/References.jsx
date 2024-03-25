@@ -1,5 +1,20 @@
 import '../styles/References.css';
 
+/**
+ * Renders a list of references.
+ *
+ * @component
+ * @param {Object[]} referencesList - The list of references to render.
+ * @param {string} referencesList[].author - The author of the reference.
+ * @param {number} referencesList[].year - The year of the reference.
+ * @param {string} referencesList[].title - The title of the reference.
+ * @param {string} [referencesList[].journal] - The journal of the reference (optional).
+ * @param {string} [referencesList[].volume] - The volume of the reference (optional).
+ * @param {string} [referencesList[].pages] - The pages of the reference (optional).
+ * @param {string} [referencesList[].doi] - The DOI of the reference (optional).
+ * @param {string} [referencesList[].url] - The URL of the reference (optional).
+ * @returns {JSX.Element} The rendered References component.
+ */
 const References = ({ referencesList }) => {
     return (
         <div className="ReferencesContainer">

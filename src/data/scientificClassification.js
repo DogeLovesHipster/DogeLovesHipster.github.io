@@ -1,3 +1,9 @@
+/**
+ * Array containing scientific classification data.
+ *
+ * @type {Array<Object>}
+ */
+
 const scentificClassificationData = [
     {
         domain: 'Eukaryota',

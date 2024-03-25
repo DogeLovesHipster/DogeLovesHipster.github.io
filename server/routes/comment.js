@@ -1,6 +1,11 @@
 import express from "express";
 import { Comment } from "../models/Comment.js";
 
+/**
+ * Fetches comments from the database and sorts them by createdAt in descending order.
+ * @type {Array} An array of comments.
+ */
+
 const router = express.Router();
 
 // POST route to create a new comment

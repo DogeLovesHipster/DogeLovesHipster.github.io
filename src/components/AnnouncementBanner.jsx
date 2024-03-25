@@ -3,6 +3,11 @@ import images from '../data/bannerImages.js';
 
 import '../styles/AnnouncementBanner.css';
 
+/**
+ * Renders an announcement banner component.
+ *
+ * @returns {JSX.Element} The announcement banner component.
+ */
 const AnnouncementBanner = () => {
     const [showBanner, setShowBanner] = useState(true);
     const [bannerImage, setBannerImage] = useState(null);
