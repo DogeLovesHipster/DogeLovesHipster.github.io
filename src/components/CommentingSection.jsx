@@ -11,7 +11,7 @@ const CommentingSection = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5173/comments')
+        fetch('http://localhost:5173/red-cockaded-woodpecker')
             .then(response => response.json())
             .then(data => setComments(data))
             .catch(error => {
@@ -25,7 +25,7 @@ const CommentingSection = () => {
 
         const newComment = { name, comment };
 
-        fetch('http://localhost:5173/comments', {
+        fetch('http://localhost:5173/red-cockaded-woodpecker', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newComment),
