@@ -1,6 +1,57 @@
 # Wikipedia Clone - Birdpedia edition
 A from scatch React Wikipediaclone practice project that teaches me the intricacies of the library and Javascript. I focused on multiple elements that I required practice in like creating components, building/deploying, and file management. Though the project was mostly successful, I did run into some pitfalls.
 
+## Instructions to Run
+
+To run the project, follow these steps:
+
+1. Clone the repository using Git:
+
+``
+git clone https://github.com/DogeLovesHipster/DogeLovesHipster.github.io
+``
+
+2. Navigate to the server folder and install the dependencies:
+
+``
+cd server
+npm install
+``
+
+3. Navigate back to the main folder and install the dependencies:
+
+``
+cd ..
+npm install
+``
+
+4. Start the development server for the server folder:
+
+``
+cd server
+npm run dev
+``
+
+5. In a separate terminal, start the development server for the main folder:
+
+``
+cd ..
+npm run dev
+``
+
+6. To build the project for production, run the following command in the main folder:
+
+``
+npm run build
+``
+
+7. Finally, to deploy the project on GitHub Pages, run:
+
+``
+npm run deploy
+``
+___
+
 ### Connecting MongoDB backend with comment component
 Along the way, I wanted to include a commenting system in the form of a component that connects to my backend to display comments from users. Though this problem proved difficult with my experience. After spending countless hours trying to debug the particular bug, I was unable to solve it. I tried multiple methods of trying to solve it, but I was only able to get more of an understanding of the rest of the code and how backend functions rather than solving the bug.
 
