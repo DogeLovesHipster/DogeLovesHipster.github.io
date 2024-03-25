@@ -70,7 +70,7 @@ I'll provide the images of my errors below to see what I came across at the poin
 
 ### My conclusion
 
-I'm submitting my code without the backend fully connected, but leaving the code in as. It will contain all my attempted code and fixes, but it fully not working because I want to show the amount of time and effort I put in trying to make it to work. I also included a few comments in my code to explain where I think the problem may be. I think I'm already growing tired with the amount of time and effort I put in this project, so I think this is a good place to leave it. I learned a lot.
+I'm submitting my code without the backend fully connected, but leaving the code in as. It will contain all my attempted code and fixes, but it fully not working because I want to show the amount of time and effort I put in trying to make it to work. I also included a few comments in my code to explain where I think the problem may be. I think I'm already growing tired with the amount of time and effort I put in this project, so I think this is a good place to leave it. I learned a lot. Any guidence and explanations on how to fix the issue would be greatly appreciated!
 
 ![Comment Box Section with error at top](images/Screenshot1.png)
 ![Comment Box Section with web dev tools console with no error and mongosh open to show db open](images/Screenshot2.png)
